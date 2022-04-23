@@ -8,6 +8,8 @@ Training data, code, and manual will be released after acceptance before the cam
 
 This is NOT an ijcai reject. It failed to make the DDL and is not submitted.
 
+[Update] The links are now restored (M$ locked the disposable account and we have unlocked it now).
+
 ## Handbook
 See handbook.pdf
 
