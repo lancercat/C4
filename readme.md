@@ -2,23 +2,27 @@
 # CFOR: Character-First Open-set Text Recognition
 
 
-Mostly done. After a few grammar checks, this repo would be ready for review.
-
-Training data, code, and manual will be released after acceptance before the camera-ready phase to maintain anonymity. 
-
-This is NOT an ijcai reject. It failed to make the DDL and is not submitted.
-
-[Update] The links are now restored (M$ locked the disposable account and we have unlocked it now).
 
 ## Handbook
-See handbook.pdf
+For technical details, see handbook.pdf
 
 In case of failing links, we have reproduced the experiments in advance. The collected screenshots are in the document. 
 
 Let's hope M$ to go nicely on the shared links :-)
 
-We will release training scripts, training data, co-training data, and corresponding data building scripts after acceptance. 
+[Update] The links are now restored (M$ locked the disposable account and we have unlocked it now).
 
+The repo is currently inference only. The training code is there and should be functional, 
+
+however the data needed by the LSCT module is currently absent. 
+
+It is physically in my backup drives in another country, which... is far away and will be expensive to fly to.  Will regen at a slightly later date. 
+
+The data generator will be cleaned up, documented and released after I end the current struggles at my paws. 
+
+It's hunting season for us CV fellows, so around Q1 2025 maybe?
+
+I will release them eariler if I am in working spirit after 20th, Nov or during Xmas vacation tho. 
 
 ## Data
 
