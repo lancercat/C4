@@ -1,7 +1,9 @@
 
 # CFOR: Character-First Open-set Text Recognition
 
+The offical implementation
 
+So far all the works on the old framework are concluded. It's merge, moderize, and rennovate time :) 
 
 ## Handbook
 For technical details, see handbook.pdf
