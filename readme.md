@@ -10,9 +10,6 @@ For technical details, see handbook.pdf
 
 In case of failing links, we have reproduced the experiments in advance. The collected screenshots are in the document. 
 
-Let's hope M$ to go nicely on the shared links :-)
-
-[Update] The links are now restored (M$ locked the disposable account and we have unlocked it now).
 
 The repo is currently inference only. The training code is there and should be functional, 
 
