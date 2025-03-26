@@ -10,7 +10,7 @@ class lmdb_wrapper:
         this.root=lmdb_dir;
         os.makedirs(lmdb_dir, exist_ok=True)
 
-        this.db=lmdb.open(lmdb_dir,map_size=1e11);
+        this.db=lmdb.open(lmdb_dir,map_size=100000000);
         this.load=0;
         this.txn=this.db.begin(write=True);
 
