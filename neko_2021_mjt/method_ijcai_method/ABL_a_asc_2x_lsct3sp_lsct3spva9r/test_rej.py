@@ -1,4 +1,5 @@
 from eval_configs_rej import dan_mjst_eval_cfg
+from neko_sdk.root import find_model_root,find_export_root
 
 if __name__ == '__main__':
     import sys
@@ -6,7 +7,7 @@ if __name__ == '__main__':
         argv = ["Meeeeooooowwww",
                 None,#"/home/lasercat/cat/c4-models/g2/ABL_a_asc_2x_lsct3sp_lsct3spva9r/jtrmodels/gosr",
                 "_E0",
-                "/home/lasercat/cat/c4-models/g2/ABL_a_asc_2x_lsct3sp_lsct3spva9r/jtrmodels",
+                find_model_root()+"ABL_a_asc_2x_lsct3sp_lsct3spva9r",
                 ]
     else:
         argv=sys.argv;
