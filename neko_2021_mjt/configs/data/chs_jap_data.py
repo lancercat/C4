@@ -25,6 +25,7 @@ def get_chs_tr_meta64(root):
 def get_jap_te_meta64(root):
     temeta = os.path.join(root,"dicts","dabjpmlt64.pt");
     return  temeta;
+
 def get_jap_te_metaosr(root):
     temeta = os.path.join(root,"dicts","dabjpmltch_osr.pt");
     return  temeta;
