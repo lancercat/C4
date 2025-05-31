@@ -37,7 +37,7 @@ class neko_modular:
     def load(this,itrkey):
         p = this.path + itrkey + ".pth";
         try:
-            this.model.load_state_dict(torch.load(p).state_dict())
+            this.model.load_state_dict(torch.load(p,weights_only=False).state_dict())
         except:
             print(this.name, "cannot load", "itr",p,", starting fresh")
 

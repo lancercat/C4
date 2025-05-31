@@ -61,6 +61,7 @@ class neko_odan_eval_tasks(neko_abstract_eval_tasks):
     def setupthis(this,cfgs):
         this.temeta_args = cfgs["temeta"];
         this.protoname = cfgs["protoname"];
+        this.name=cfgs["temeta"]["name"];
 
 
     def exportvis(this,data,label,gmaps,results,all,export_path,mdict):
@@ -165,7 +166,7 @@ class neko_odan_eval_tasks(neko_abstract_eval_tasks):
         mdict=torch.load(this.temeta_args["meta_path"])
         return global_cache,mdict;
     def test_ds(this, test_loader,dsname, miter=1000, debug=None, dbgpath=None,rot=0):
-
+        print(this.name);
         tmetastart = time.time();
         global_cache,mdict=this.testready();
 

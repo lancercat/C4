@@ -4,7 +4,7 @@ from neko_2021_mjt.configs.loadouts.mk7.lsctt_module_set_mk7 import \
     arm_lsct_mk7_routine,arm_lsct_mk7_va9_routine
 from neko_2021_mjt.configs.loadouts.base_module_set import arm_base_task_default2
 from neko_2021_mjt.configs.routines.ocr_routines.mk7.osdanmk7_routine_cfg import osdanmk7_eval_routine_cfg
-from neko_2021_mjt.dss_presets.dual_no_lsct_32 import get_eval_dss,get_eval_dssgosr,get_eval_dssosr;
+from neko_2021_mjt.dss_presets.dual_no_lsct_32 import get_eval_dss,get_eval_dssgosr,get_eval_dssosr,get_eval_dssostr;
 from neko_2021_mjt.dss_presets.dual_lsct32 import get_dsssch,get_teds;
 from neko_2021_mjt.dss_presets.dual_no_lsct_32 import get_eval_dss_kr,get_eval_dssenjp;
 
@@ -39,12 +39,14 @@ def arm_eval_tasks_full(dsroot,log_path,maxT_mjst=25,maxT_chs=30):
 def arm_eval_tasks_osr(dsroot,log_path,maxT_mjst=25,maxT_chs=30):
     te_meta_path_chsjap, te_meta_path_mjst, mjst_eval_ds, chs_eval_ds = \
         get_eval_dss(dsroot, maxT_mjst, maxT_chs);
-    te_meta_path_chsjapo, _,_,_ = \
+    te_meta_path_chsjaposr, _,_,_ = \
         get_eval_dssosr(dsroot, maxT_mjst, maxT_chs);
-    te_meta_path_chsjapg, _,_,_  = \
+    te_meta_path_chsjapgosr, _,_,_  = \
         get_eval_dssgosr(dsroot, maxT_mjst, maxT_chs);
-
+    te_meta_path_chsjapostr, _,_,_  = \
+        get_eval_dssostr(dsroot, maxT_mjst, maxT_chs);
     task_dict = {}
+
     task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_", osdanmk7_eval_routine_cfg, maxT_chs,
                                        te_meta_path_chsjap, chs_eval_ds,
                                        log_path,name="GZSL");
@@ -52,20 +54,30 @@ def arm_eval_tasks_osr(dsroot,log_path,maxT_mjst=25,maxT_chs=30):
                                        te_meta_path_chsjap,
                                        chs_eval_ds,
                                        log_path,name="GZSL");
+
     task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_", osdanmk7_eval_routine_cfg, maxT_chs,
-                                       te_meta_path_chsjapo, chs_eval_ds,
+                                       te_meta_path_chsjaposr, chs_eval_ds,
                                        log_path,measure_rej=True,name="OSR");
     task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_va9r_", osdanmk7_eval_routine_cfg, maxT_chs,
-                                       te_meta_path_chsjapo,
+                                       te_meta_path_chsjaposr,
                                        chs_eval_ds,
                                        log_path,measure_rej=True,name="OSR");
+
     task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_", osdanmk7_eval_routine_cfg, maxT_chs,
-                                       te_meta_path_chsjapg, chs_eval_ds,
+                                       te_meta_path_chsjapgosr, chs_eval_ds,
                                        log_path,measure_rej=True,name="GOSR");
     task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_va9r_", osdanmk7_eval_routine_cfg, maxT_chs,
-                                       te_meta_path_chsjapg,
+                                       te_meta_path_chsjapgosr,
                                        chs_eval_ds,
                                        log_path,measure_rej=True,name="GOSR");
+
+    task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_", osdanmk7_eval_routine_cfg, maxT_chs,
+                                       te_meta_path_chsjapostr, chs_eval_ds,
+                                       log_path,measure_rej=True,name="OSTR");
+    task_dict = arm_base_task_default2(task_dict, "base_chs_lsctsp_2x_va9r_", osdanmk7_eval_routine_cfg, maxT_chs,
+                                       te_meta_path_chsjapostr,
+                                       chs_eval_ds,
+                                       log_path,measure_rej=True,name="OSTR");
     return task_dict;
 
 def model_mod_cfg(tr_meta_path_chs,tr_meta_path_mjst,maxT_mjst,maxT_chs):

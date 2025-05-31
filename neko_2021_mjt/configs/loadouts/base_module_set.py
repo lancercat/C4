@@ -182,6 +182,7 @@ def arm_base_task_default2(srcdst,prefix,routine_type,maxT,te_meta_path,datasets
             {
                 "meta_path": te_meta_path,
                 "case_sensitive": False,
+                "name":name
             },
         "datasets":datasets,
         "routine_cfgs": te_routine,

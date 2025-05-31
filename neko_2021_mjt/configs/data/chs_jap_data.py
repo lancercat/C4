@@ -26,12 +26,14 @@ def get_jap_te_meta64(root):
     temeta = os.path.join(root,"dicts","dabjpmlt64.pt");
     return  temeta;
 def get_jap_te_metaosr(root):
-    temeta = os.path.join(root,"dicts","dabjpmltch_seen.pt");
+    temeta = os.path.join(root,"dicts","dabjpmltch_osr.pt");
     return  temeta;
 def get_jap_te_metagosr(root):
     temeta = os.path.join(root,"dicts","dabjpmltch_nohirakata.pt");
     return  temeta;
-
+def get_jap_te_metaostr(root):
+    temeta = os.path.join(root,"dicts","dabjpmltch_kanji.pt");
+    return  temeta;
 def get_kr_te_meta(root):
     temeta = os.path.join(root,"dicts","dabkrmlt.pt");
     return  temeta;
