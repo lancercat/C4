@@ -24,7 +24,7 @@ NOTE: IF you are going to reproduce ablative experiments and splits other than G
 
 https://www.kaggle.com/datasets/vsdf2898kaggle/osocrtraining
 
-and the dabjpmltch_osr.pt files in this repo.
+and the dabjpmltch_osr.pt and dabjpmltch_kanji.pt files in this repo.
 
 #### Training Dataset
 The word training set can be found on 
