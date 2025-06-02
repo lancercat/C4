@@ -20,6 +20,12 @@ The data we collected, the data collection methodology, and data sources are inc
 #### Evaluation Dataset
 https://1drv.ms/u/s!Ah3A6cw9Sjd2b8dDQPlblSF4TrM
 
+NOTE: IF you are going to reproduce ablative experiments and splits other than GZSL, you will need metas from 
+
+https://www.kaggle.com/datasets/vsdf2898kaggle/osocrtraining
+
+and the dabjpmltch_osr.pt files in this repo.
+
 #### Training Dataset
 The word training set can be found on 
 https://www.kaggle.com/datasets/vsdf2898kaggle/osocrtraining
